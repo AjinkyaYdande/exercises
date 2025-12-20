@@ -1,4 +1,4 @@
-// Brute force apporach
+// Brute force apporach -----------------------
 
 function removeDup(arr) {
 
@@ -11,4 +11,32 @@ function removeDup(arr) {
     return unique;
 }
 
-console.log(removeDup([1, 1, 1, 2, 2, 3, 3, 3]))
+// console.log(removeDup([1, 1, 1, 2, 2, 3, 3, 3]))
+
+
+// Two Pointer ------------------------------
+
+function removeDupTwoPointer(arr) {
+    let i = 0;
+    for (let j = i; j < arr.length; j++) {
+        if(arr[j] !== arr[i]){
+            i++;
+            arr[i] = arr[j];
+        }
+    }
+    return arr.slice(0,i+1)
+}
+
+console.log(removeDupTwoPointer([1, 1, 1, 2, 2, 3, 3, 3]))
+
+
+
+
+
+
+
+
+
+
+
+
